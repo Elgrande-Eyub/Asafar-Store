@@ -12,7 +12,7 @@ class homeController extends Controller
      */
     public function index()
     {
-        $products = product::get();
+        return $products = product::get();
 
         return view('index',compact('products'));
     }
