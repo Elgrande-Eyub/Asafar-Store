@@ -15,3 +15,4 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/megamenu.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/dreaming-attribute.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

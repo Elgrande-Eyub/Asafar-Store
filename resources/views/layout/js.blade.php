@@ -1,3 +1,4 @@
+{{-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> --}}
 <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/chosen.min.js') }}"></script>

@@ -90,7 +90,7 @@
 
                                 <div class="block-minicart block-dreaming akasha-mini-cart akasha-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-akasha="akasha-dropdown">
-                                        <a class="block-link link-dropdown" href="cart.html">
+                                        <a class="block-link link-dropdown" href="#">
                                             <span class="flaticon-bag"></span>
                                             <span class="count">3</span>
                                         </a>
@@ -138,7 +138,7 @@
                                                         class="akasha-Price-currencySymbol">$</span>418.00</span>
                                             </p>
                                             <p class="akasha-mini-cart__buttons buttons">
-                                                <a href="cart.html" class="button akasha-forward">Viewcart</a>
+                                                <a href="#" class="button akasha-forward">Viewcart</a>
                                                 <a href="checkout.html" class="button checkout akasha-forward">Checkout</a>
                                             </p>
                                         </div>
@@ -199,7 +199,7 @@
                     </div>
                     <div class="block-minicart block-dreaming akasha-mini-cart akasha-dropdown">
                         <div class="shopcart-dropdown block-cart-link" data-akasha="akasha-dropdown">
-                            <a class="block-link link-dropdown" href="cart.html">
+                            <a class="block-link link-dropdown" href="#">
                                 <span class="flaticon-bag"></span>
                                 <span class="count">3</span>
                             </a>
@@ -247,7 +247,7 @@
                                             class="akasha-Price-currencySymbol">$</span>418.00</span>
                                 </p>
                                 <p class="akasha-mini-cart__buttons buttons">
-                                    <a href="cart.html" class="button akasha-forward">Viewcart</a>
+                                    <a href="#" class="button akasha-forward">Viewcart</a>
                                     <a href="checkout.html" class="button checkout akasha-forward">Checkout</a>
                                 </p>
                             </div>
@@ -352,7 +352,7 @@
 
                             <div class="block-minicart block-dreaming akasha-mini-cart akasha-dropdown">
                                 <div class="shopcart-dropdown block-cart-link" data-akasha="akasha-dropdown">
-                                    <a class="block-link link-dropdown" href="cart.html">
+                                    <a class="block-link link-dropdown" href="#">
                                         <span class="flaticon-bag"></span>
                                         <span class="count">3</span>
                                     </a>
@@ -361,6 +361,19 @@
                                     <div class="widget_shopping_cart_content">
                                         <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
                                         <ul class="akasha-mini-cart cart_list product_list_widget">
+                                            @if(session('cart'))
+                                        @foreach(session('cart') as $id => $details)
+                                            <div class="row cart-detail">
+                                                <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                                                    <img src="{{ asset('storage/' . $details['image']) }}" />
+                                                </div>
+                                                <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                                                    <p>{{ $details['name'] }}</p>
+                                                    <span class="price text-info"> ${{ $details['price'] }}</span> <span class="count"> Quantity:{{ $details['qte'] }}</span>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
                                             <li class="akasha-mini-cart-item mini_cart_item">
                                                 <a href="#" class="remove remove_from_cart_button">×</a>
                                                 <a href="#">
@@ -400,7 +413,7 @@
                                                     class="akasha-Price-currencySymbol">$</span>418.00</span>
                                         </p>
                                         <p class="akasha-mini-cart__buttons buttons">
-                                            <a href="cart.html" class="button akasha-forward">Viewcart</a>
+                                            <a href="#" class="button akasha-forward">Viewcart</a>
                                             <a href="checkout.html" class="button checkout akasha-forward">Checkout</a>
                                         </p>
                                     </div>
@@ -461,7 +474,7 @@
                 </div>
                 <div class="block-minicart block-dreaming akasha-mini-cart akasha-dropdown">
                     <div class="shopcart-dropdown block-cart-link" data-akasha="akasha-dropdown">
-                        <a class="block-link link-dropdown" href="cart.html">
+                        <a class="block-link link-dropdown" href="#">
                             <span class="flaticon-bag"></span>
                             <span class="count">3</span>
                         </a>
@@ -470,12 +483,18 @@
                         <div class="widget_shopping_cart_content">
                             <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
                             <ul class="akasha-mini-cart cart_list product_list_widget">
+
+
+
                                 <li class="akasha-mini-cart-item mini_cart_item">
+                                    {{-- @foreach ($products as $product)
+                                    {{ $product->price}}
+                                                @endforeach --}}
                                     <a href="#" class="remove remove_from_cart_button">×</a>
                                     <a href="#">
                                         <img src="assets/images/apro134-1-600x778.jpg"
                                              class="attachment-akasha_thumbnail size-akasha_thumbnail"
-                                             alt="img" width="600" height="778">T-shirt with skirt – Pink&nbsp;
+                                             alt="img" width="600" height="778">T-sshirt with skirt – Pink&nbsp;
                                     </a>
                                     <span class="quantity">1 × <span
                                             class="akasha-Price-amount amount"><span
@@ -509,7 +528,7 @@
                                         class="akasha-Price-currencySymbol">$</span>418.00</span>
                             </p>
                             <p class="akasha-mini-cart__buttons buttons">
-                                <a href="cart.html" class="button akasha-forward">Viewcart</a>
+                                <a href="#" class="button akasha-forward">Viewcart</a>
                                 <a href="checkout.html" class="button checkout akasha-forward">Checkout</a>
                             </p>
                         </div>

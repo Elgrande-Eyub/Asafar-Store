@@ -9080,7 +9080,7 @@ div.quantity .input-qty {
     text-align: center;
     border: none;
     display: inline-block;
-    float: left;
+    /* float: left; */
     border-radius: 0;
 }
 

@@ -102,7 +102,9 @@
                                 <div class="group-button">
 
                                     <div class="add-to-cart">
-                                        <a href="#" class="button product_type_simple add_to_cart_button">Add to cart</a>
+                                        {{-- <a href="{{ route('addToCart', ['sku'=>$product->sku]) }}" data-productSKU="{{ $product->sku }}"   class="button product_type_simple add_to_cart_button addToCartButton">Add to cart</a> --}}
+                                        <a data-productSKU="{{ $product->sku }}"   class="button product_type_simple add_to_cart_button addtocart">Add to cart</a>
+
                                     </div>
                                 </div>
                             </div>
@@ -136,10 +138,43 @@
 
 
 
+
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.addtocart').on('click', function () {
+
+                var productSku = $(this).data('productsku');
+                    // console.log('Product SKU:', productSku);
+                // Send an AJAX request
+                $.ajax({
+                    type: 'GET',
+                    url: '/add-to-cart', // Adjust the URL based on your Laravel route
+                    data: {
+                        productSku: productSku,
+                        _token: '{{ csrf_token() }}', // Add CSRF token for Laravel
+                    },
+                    success: function (response) {
+                        // // alert(response.message);
+                         console.log(response)
+                        // You can replace this with a more user-friendly notification
+                        // Update the mini cart UI (assuming you have a function for this)
+                        // updateMiniCart();
+                    },
+                    error: function (error) {
+                        console.error('Error adding to cart:', error);
+                    }
+                });
+            });
+
+
+        });
+    </script>
+
+
     <div>
         <div class="akasha-banner style-02 left-center">
             <div class="banner-inner">
