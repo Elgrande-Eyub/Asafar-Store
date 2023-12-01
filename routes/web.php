@@ -34,7 +34,7 @@ Route::get('/contact', function () {
 
 })->name('contact'); */
 
-Route::get('/contact',  [contactController::class,'index'])->name('index');
+Route::get('/contact',  [contactController::class,'index'])->name('contact');
 Route::post('/contact',  [contactController::class,'store'])->name('contact');
 
 Route::get('/order-tracking', function () {
