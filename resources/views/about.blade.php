@@ -31,7 +31,9 @@
             <div class="akasha-popupvideo style-01">
                 <div class="popupvideo-inner">
                     <div class="icon">
-                        <img src="assets/images/about-img.jpg"
+                        <img src="assets/images/about-img.png"
+                             class="attachment-full size-full" alt="img">
+                             <img src="assets/images/about-img2.png" style="margin-top: 1rem"
                              class="attachment-full size-full" alt="img">
                         <div class="product-video-button">
                             <a class="buttonvideo" href="#" data-videosite="vimeo" data-videoid="158800043" tabindex="0">
@@ -40,160 +42,47 @@
                                 <div class="videobox_animation circle_3"></div>
                             </a>
                         </div>
+
                     </div>
+
                     <div class="popupvideo-wrap">
                         <h4 class="title">
                             Who we are </h4>
-                        <p class="desc">We believe in a world where you have total freedom to be you, without judgement.
-                            To experiment. To express yourself. To be brave and grab life as the extraordinary adventure
-                            it is. So we make sure everyone has an equal chance to discover all the amazing things
-                            they’re capable of – no matter who they are, where they’re from or what looks they like to
-                            boss.</p>
-                        <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find
-                            your fit, offering our Ciloe Brands in more than 30 sizes – and we’re committed to providing
-                            all sizes at the same price</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-001">
-        <div class="container">
+                        <p class="desc">
+                            <h4>About Asafar.us</h4>
+                            <p>Welcome to Asafar.us, where the pure essence of Morocco comes to life through our exceptional organic products. We take pride in offering a unique range of Moroccan treasures, with a focus on exquisite honey and the delightful ammlou.
+                            </p>
 
-            <div class="akasha-slide">
-                <div class="owl-slick equal-container better-height"
-                     data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:3,&quot;rows&quot;:1}"
-                     data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
-                    <div class="akasha-team style-01">
-                        <div class="team-inner">
-                            <div class="thumb-avatar">
-                                <a href="#" target="_self" tabindex="0">
-                                    <img src="assets/images/team-img1.jpg"
-                                         class="attachment-full size-full" alt="img"></a>
-                                <div class="list-social">
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-facebook"></i></a>
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-twitter"></i></a>
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="content-team">
-                                <h3 class="name">
-                                    <a href="#" target="_self" tabindex="0">
-                                        Annie Taylor </a>
-                                </h3>
-                                <p class="positions">Operations</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="akasha-team style-01">
-                        <div class="team-inner">
-                            <div class="thumb-avatar">
-                                <a href="#" target="_self" tabindex="0">
-                                    <img src="assets/images/team-img2.jpg"
-                                         class="attachment-full size-full" alt="img"> </a>
-                                <div class="list-social">
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-facebook"></i></a>
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-twitter"></i></a>
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="content-team">
-                                <h3 class="name">
-                                    <a href="#" target="_self" tabindex="0">
-                                        Ayomide Regan </a>
-                                </h3>
-                                <p class="positions">Marketing Personal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="akasha-team style-01">
-                        <div class="team-inner">
-                            <div class="thumb-avatar">
-                                <a href="#" target="_self" tabindex="0">
-                                    <img src="assets/images/team-img3.jpg"
-                                         class="attachment-full size-full" alt="img"> </a>
-                                <div class="list-social">
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-facebook"></i></a>
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-twitter"></i></a>
-                                    <a href="#" tabindex="0"><i class="az_tta-icon fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="content-team">
-                                <h3 class="name">
-                                    <a href="#" target="_self" tabindex="0">
-                                        Violet Frase </a>
-                                </h3>
-                                <p class="positions">Director</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="akasha-team style-01">
-                        <div class="team-inner">
-                            <div class="thumb-avatar">
-                                <a href="#" target="_self" tabindex="-1">
-                                    <img src="assets/images/team-img4.jpg"
-                                         class="attachment-full size-full" alt="img"> </a>
-                                <div class="list-social">
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-facebook"></i></a>
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-twitter"></i></a>
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="content-team">
-                                <h3 class="name">
-                                    <a href="#" target="_self" tabindex="-1">
-                                        Frank Greer </a>
-                                </h3>
-                                <p class="positions">Operations</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="akasha-team style-01">
-                        <div class="team-inner">
-                            <div class="thumb-avatar">
-                                <a href="#" target="_self" tabindex="-1">
-                                    <img src="assets/images/team5-1.jpg"
-                                         class="attachment-full size-full" alt="img"> </a>
-                                <div class="list-social">
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-facebook"></i></a>
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-twitter"></i></a>
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="content-team">
-                                <h3 class="name">
-                                    <a href="#" target="_self" tabindex="-1">
-                                        Mark Tucker </a>
-                                </h3>
-                                <p class="positions">Partner</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="akasha-team style-01">
-                        <div class="team-inner">
-                            <div class="thumb-avatar">
-                                <a href="#" target="_self" tabindex="-1">
-                                    <img src="assets/images/team6.jpg"
-                                         class="attachment-full size-full" alt="img"> </a>
-                                <div class="list-social">
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-facebook"></i></a>
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-twitter"></i></a>
-                                    <a href="#" tabindex="-1"><i class="az_tta-icon fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="content-team">
-                                <h3 class="name">
-                                    <a href="#" target="_self" tabindex="-1">
-                                        Perry Conner </a>
-                                </h3>
-                                <p class="positions">Partner</p>
-                            </div>
-                        </div>
+
+                            <h4>Our Story</h4>
+
+                            <p>Asafar.us is born from a passion for authenticity and a deep appreciation for the rich Moroccan traditions. Our journey began with the desire to share the goodness of nature, sourced directly from the bountiful landscapes of Morocco. We believe in the power of organic, sustainable practices that not only preserve the environment but also deliver unparalleled quality to our customers.
+                            </p>
+                            <h4>The Essence of Morocco</h4>
+                            <p>At Asafar.us, we specialize in curating the finest Moroccan honey and ammlou, bringing you the purest flavors and nutritional benefits straight from the heart of Morocco. Our honey is a true testament to the diverse flora of the Moroccan countryside, resulting in a rich, amber nectar that captivates the senses. Each jar tells a story of bees dancing through fragrant blossoms and the meticulous craftsmanship of our beekeepers.
+                            </p>
+                            <h4>Ammlou: A Taste of Tradition</h4>
+
+                            <p>Explore the unique experience of ammlou, a traditional Moroccan spread that combines the richness of almonds, argan oil, and honey. This delectable fusion offers a harmonious blend of nutty undertones and sweet notes, a culinary delight that reflects the centuries-old culinary heritage of Morocco.
+                            </p>
+
+                            <h4>Sustainability and Quality</h4>
+                            <p>We are committed to sustainable and ethical practices, ensuring that our products not only meet the highest quality standards but also contribute to the well-being of the environment and local communities. Our dedication to authenticity and purity is a testament to the care we put into every step of the production process.
+                            </p>
+
+                            <h4>Join Us on a Journey</h4>
+
+                            <p>Embark on a journey with Asafar.us and discover the unparalleled taste of Moroccan nature. We invite you to savor the richness of our organic honey and ammlou, crafted with love and respect for the land. At Asafar.us, we don't just offer products; we offer a piece of Morocco, delivered to your doorstep.
+                            </p>
+
+
+                            Thank you for choosing Asafar.us – where nature meets tradition, and every jar tells a story.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="section-040">
         <div class="akasha-heading style-01">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\contactController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\orderController;
 use Illuminate\Support\Facades\Route;
@@ -28,10 +29,13 @@ Route::post('/order',  [orderController::class,'store'])->name('order');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
-
+/*
 Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+
+})->name('contact'); */
+
+Route::get('/contact',  [contactController::class,'index'])->name('index');
+Route::post('/contact',  [contactController::class,'store'])->name('contact');
 
 Route::get('/order-tracking', function () {
     return view('order-tracking');

@@ -31,11 +31,12 @@
                     <div class="akasha">
                         <div class="akasha-notices-wrapper"></div>
 
-                        @if(Session::has('error'))
-    <div class="alert alert-danger">
-        {{ Session::get('error') }}
-    </div>
-@endif
+                        @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
                         <form name="checkout" id="checkout" method="post" class="checkout akasha-checkout"
                               action="{{ route('order') }}"
                               >

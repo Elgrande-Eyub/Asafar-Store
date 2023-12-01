@@ -96,9 +96,9 @@ class orderController extends Controller
                     $orderItem->save();
                 }
 
-                return $order->id;
 
-                return redirect()->route('orders.index')->with('success', 'Order created successfully');
+
+                return redirect()->back()->with('success', 'Order Sent successfully , Will Contact You soon');
 
      }catch(Exception $e){
 
