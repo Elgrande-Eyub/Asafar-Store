@@ -55,7 +55,7 @@ class orderController extends Controller
 
                 $orderNumber = 'ORDER' . rand(100000, 999999);
 
-                while (\App\Models\Order::where('order_number', $orderNumber)->exists()) {
+                while (order::where('order_number', $orderNumber)->exists()) {
                     $orderNumber = 'ORDER' . rand(100000, 999999);
                 }
 
