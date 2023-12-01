@@ -36,6 +36,11 @@
                             {{ session('success') }}
                         </div>
                     @endif
+                    @if(session('success'))
+    <div class="alert alert-success">
+    {{ session('success') }}
+    </div>
+    @endif
 
                         <form name="checkout" id="checkout" method="post" class="checkout akasha-checkout"
                               action="{{ route('order') }}"
