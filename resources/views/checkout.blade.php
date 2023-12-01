@@ -36,11 +36,11 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    @if(session('success'))
-    <div class="alert alert-success">
-    {{ session('success') }}
-    </div>
-    @endif
+                    @if(Session::has('error'))
+                    <div class="alert alert-danger">
+                        {{ Session::get('error') }}
+                    </div>
+                @endif
 
                         <form name="checkout" id="checkout" method="post" class="checkout akasha-checkout"
                               action="{{ route('order') }}"
