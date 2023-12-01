@@ -27,44 +27,54 @@ class homeController extends Controller
 
     public function cart()
     {
-         $cart = session()->get('cart', []);
+        $cart = session()->get('cart', []);
+        $products = product::get();
+        return view('cart',compact('cart','products'));
+    }
 
-        return view('cart',compact('cart'));
+    public function checkout()
+    {
+        $cart = session()->get('cart', []);
+
+        return view('checkout',compact('cart'));
     }
 
     public function addToCart( request $request)
     {
-                /*    $cart = session()->get('cart', []);
-
-            // Clear the cart data from the session
-            session()->forget('cart');
-
-            return $cart; */
 
         $product = product::where('sku',$request['productSku'])->first();
 
 
         $cart = session()->get('cart', []);
 
-        if(isset($cart[$request['productSku']])) {
+        if (isset($cart[$request['productSku']])) {
             $cart[$request['productSku']]['qte']++;
-        } else {
 
-            if( $product->isDiscount){
+            // Update the total for the specific item
+            $cart[$request['productSku']]['total'] = $cart[$request['productSku']]['qte'] * $cart[$request['productSku']]['price'];
+        } else {
+            if ($product->isDiscount) {
                 $price = $product->compared_price;
-            }else{
+            } else {
                 $price = $product->price;
             }
+
             $cart[$request['productSku']] = [
                 "name" => $product->name,
                 "sku" => $product->sku,
                 "qte" => 1,
                 "price" => $price,
-                "image" => $product->attachement
+                "image" => $product->attachement,
+                "total" => $price  // Initial total for the item
             ];
         }
 
+
         session()->put('cart', $cart);
+
+        return response()->json([
+            'countCart' => count($cart)
+        ]);
 
     }
 
@@ -76,19 +86,48 @@ class homeController extends Controller
         $cart = session()->get('cart', []);
 
         if (isset($cart[$productSku])) {
-            $cart[$productSku]['qte'] = $newQuantity;
-            session()->put('cart', $cart);
+            // Calculate the difference in quantity
+            $quantityDifference = $newQuantity - $cart[$productSku]['qte'];
 
-            // Calculate the updated total based on new quantity and product price
-            $updatedTotal = $cart[$productSku]['price'] * $newQuantity;
+            // Update the quantity in the cart
+            $cart[$productSku]['qte'] = $newQuantity;
+
+            // Update the total based on the new quantity
+            $cart[$productSku]['total'] += $quantityDifference * $cart[$productSku]['price'];
+
+            // Update the overall total for the entire cart
+            $overallTotal = array_sum(array_column($cart, 'total'));
+
+            // Update the cart session
+            session()->put('cart', $cart);
 
             return response()->json([
                 'message' => 'Cart quantity updated successfully',
-                'updatedTotal' => $updatedTotal,
+                'updatedTotal' => $cart[$productSku]['total'],
+                'overallTotal' => $overallTotal
             ]);
         }
 
         return response()->json(['error' => 'Product not found in the cart'], 404);
+    }
+
+
+    public function deleteFromCart(Request $request)
+    {
+        $productSku = $request->input('productSku');
+
+        $cart = session()->get('cart', []);
+
+        // Check if the item exists in the cart
+        if (isset($cart[$productSku])) {
+            // Remove the item from the cart
+            unset($cart[$productSku]);
+            session()->put('cart', $cart);
+
+            return response()->json(['message' => 'Item deleted from cart']);
+        }
+
+        return response()->json(['error' => 'Item not found in the cart'], 404);
     }
 
 
@@ -114,10 +153,10 @@ class homeController extends Controller
      */
     public function show($sku)
     {
-        $product = product::where('sku',$sku)->first();
+        $item = product::where('sku',$sku)->first();
         $products = Product::get();
 
-        return view('single-product',compact('product','products'));
+        return view('single-product',compact('item','products'));
 
     }
 

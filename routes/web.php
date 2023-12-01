@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\orderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,10 @@ Route::get('/shop',  [homeController::class,'shop'])->name('shop');
 
 Route::get('/cart',  [homeController::class,'cart'])->name('cart');
 
+Route::get('/checkout',  [homeController::class,'checkout'])->name('checkout');
+
+Route::post('/order',  [orderController::class,'store'])->name('order');
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
@@ -38,3 +43,6 @@ Route::get('/product/{sku}',  [homeController::class,'show'])->name('single_prod
 Route::get('add-to-cart', [homeController::class, 'addToCart'])->name('addToCart');
 
 Route::post('update-cart-quantity', [homeController::class, 'updateCartQuantity'])->name('updateQTE');
+// routes/web.php
+
+Route::post('/delete-from-cart', [homeController::class, 'deleteFromCart'])->name('delete_from_cart');

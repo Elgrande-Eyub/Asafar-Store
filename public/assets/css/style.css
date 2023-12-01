@@ -138,6 +138,14 @@ figure {
     margin: 0;
 }
 
+.notification {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 10000;
+    /* width: 3rem; */
+}
+
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -9037,10 +9045,7 @@ body.admin-bar #yith-quick-view-modal {
 }
 
 .entry-summary .cart .akasha-variation-add-to-cart-disabled .single_add_to_cart_button {
-    opacity: 0.5;
-    text-decoration: line-through;
-    cursor: not-allowed;
-    pointer-events: none;
+    cursor: pointer;
 }
 
 .entry-summary div.quantity {
@@ -18343,4 +18348,113 @@ body .akasha-mapper .text__area {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.action-btn {
+    background-color: #191919;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* padding: 0.5em 1.25em; */
+    color: white !important;
+    border-radius: 0.15em;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    text-align: center;
+}
+
+.action-btn:hover {
+    background-color: #181818;
+}
+
+.action-btn:focus {
+    outline: 0.05em dashed #2e2e2e;
+    outline-offset: 0.05em;
+}
+
+.action-btn::after {
+    content: '';
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    position: absolute;
+    left: calc(50% - 0.75em);
+    top: calc(50% - 0.75em);
+    border: 0.15em solid transparent;
+    border-right-color: white;
+    border-radius: 50%;
+    animation: button-anim 0.7s linear infinite;
+    opacity: 0;
+}
+
+@keyframes button-anim {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.action-btn.loading {
+    color: transparent;
+}
+
+.action-btn.loading::after {
+    opacity: 1;
+}
+
+.add-to-cart {
+    position: relative;
+    display: inline-block;
+    /* background: $button; */
+    color: white;
+    border: none;
+    border-radius: 0;
+    /* padding: 1.25rem 2.5rem; */
+    font-size: 1rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: color 0.3s ease;
+    letter-spacing: 0.0625rem;
+}
+
+.divCart {
+    text-align: center;
+    /* width: 200px; */
+    padding: 1.25rem 2.5rem;
+    background-color: #000;
+    color: white;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divCart a {
+    /* padding: 1.25rem 2.5rem; */
+    color: white;
+}
+
+.add-to-cart::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $button-hover;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
 }

@@ -13,3 +13,4 @@
 <script src="{{ asset('assets/js/mobilemenu.js') }}"></script>
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 <script src="{{ asset('assets/js/functions.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>

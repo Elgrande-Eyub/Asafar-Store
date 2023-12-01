@@ -16,7 +16,7 @@
         <h1 class="page-title">Shop</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="index.html"><span>Home</span></a></li>
+                <li class="trail-item trail-begin"><a href="{{ route('index') }}"><span>Home</span></a></li>
                 <li class="trail-item trail-end active"><span>Shop</span>
                 </li>
             </ul>
@@ -90,7 +90,7 @@
                                     <div class="group-button">
 
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_simple add_to_cart_button">Add to cart</a>
+                                            <a data-productSKU="{{ $product->sku }}" style="cursor: pointer; background-color:#CC980A" class="button product_type_simple add_to_cart_button addtocart"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -120,6 +120,7 @@
 
                     </ul>
                 </div>
+                @include('layout.notification')
                {{--  <div class="shop-control shop-after-control">
                     <nav class="akasha-pagination">
                         <span class="page-numbers current">1</span>
