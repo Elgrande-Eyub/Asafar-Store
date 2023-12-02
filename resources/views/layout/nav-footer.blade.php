@@ -1,7 +1,7 @@
 <div class="footer-device-mobile">
     <div class="wapper">
         <div class="footer-device-mobile-item device-home">
-            <a href="index.html">
+            <a href="{{ route('index') }}">
 					<span class="icon">
 						<i class="fa fa-home" aria-hidden="true"></i>
 					</span>
@@ -10,7 +10,7 @@
         </div>
         <div class="footer-device-mobile-item device-home device-wishlist">
 
-            <a href="wishlist.html">
+            <a href="{{ route('shop') }}">
 					<span class="icon">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</span>
@@ -18,11 +18,11 @@
             </a>
         </div>
         <div class="footer-device-mobile-item device-home device-cart">
-            <a href="cart.html">
+            <a href="{{ route('cart') }}">
 					<span class="icon">
 						<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 						<span class="count-icon">
-							0
+							{{ $itemCount }}
 						</span>
 					</span>
                 <span class="text">Cart</span>

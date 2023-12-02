@@ -17,7 +17,7 @@
              data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:0,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:1,&quot;rows&quot;:1}"
              data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}}]">
             <div class="slide-wrap">
-                <img src="assets/images/background/banner.png" alt="image">
+                <img src="assets/images/background/banner.webp" alt="image">
                 <div class="slide-info">
                     <div class="container">
                         <div class="slide-inner">
@@ -39,7 +39,7 @@
                     <div class="akasha-banner style-01 left-center">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/background/banner2.png"
+                                <img src="assets/images/background/banner2.webp"
                                      class="attachment-full size-full" alt="img"></figure>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="akasha-banner style-01 right-top">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/background/banner3.png"
+                                <img src="assets/images/background/banner3.webp"
                                      class="attachment-full size-full" alt="img"></figure>
 
                         </div>
@@ -56,7 +56,7 @@
                     <div class="akasha-banner style-01 left-bottom">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/background/banner4.png"
+                                <img src="assets/images/background/banner4.webp"
                                      class="attachment-full size-full" alt="img"></figure>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
         <div class="akasha-banner style-02 left-center">
             <div class="banner-inner">
                 <figure class="banner-thumb">
-                    <img src="assets/images/background/back8.png"
+                    <img src="assets/images/background/back8.webp"
                          class="attachment-full size-full" alt="img"></figure>
             </div>
         </div>
