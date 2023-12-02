@@ -83,17 +83,17 @@ class orderController extends Controller
 
                 $order->save();
 
-                foreach($cart as $item){
+
+                foreach($cart  as $item){
 
                     $itemID = product::where('sku',$item['sku'])->first();
 
-                    $orderItem = new orderItem();
-
-                    $orderItem->product_id = $itemID->id;
-                    $orderItem->qte = $item['qte'];
-                    $orderItem->total_item = $item['total'];
-
-                    $orderItem->save();
+                    orderItem::create([
+                        'order_id' => $order->id,
+                        'product_id' => $itemID->id,
+                        'qte' => $item['qte'],
+                        'total_item' => $item['total'],
+                    ]);
                 }
 
 
@@ -110,7 +110,8 @@ class orderController extends Controller
      */
     public function show(string $id)
     {
-        //
+
+
     }
 
     /**

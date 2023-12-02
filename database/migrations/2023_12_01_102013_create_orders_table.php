@@ -28,7 +28,7 @@ return new class extends Migration
 
             $table->string('order_number');
             $table->string('total_order');
-            $table->string('status')->default('pending');
+            $table->string('status')->default('Pending');
 
             $table->timestamps();
             $table->softDeletes();

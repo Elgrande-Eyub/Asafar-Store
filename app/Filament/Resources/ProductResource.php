@@ -53,17 +53,11 @@ class ProductResource extends Resource
                     ->schema([
                         Select::make('availability')->columnSpan(2)
                         ->options([
-                            'in_stock' => 'In Stock',
-                            'sold_out' => 'Sold OUT',
-                            'coming_soon' => 'Coming Soon',
+                            'In Stock' => 'In Stock',
+                            'Sold OUT' => 'Sold OUT',
+                            'Coming Soon' => 'Coming Soon',
                         ])->native(false),
-                        // Select::make('availability')->columnSpan(2)
-                        //         ->options([
-                        //             'pending' => 'Pending',
-                        //             'in_process' => 'In Process',
-                        //             'shipped' => 'Shipped',
-                        //             'delivered' => 'Delivered',
-                        //         ])->native(false),
+
                                 Toggle::make('isVisible')->columnSpan(1)->inline()->default(TRUE),
                                 FileUpload::make('attachement')->columnSpan(2) ->directory('product')
                                 ->imageEditor()->visibility('public'),

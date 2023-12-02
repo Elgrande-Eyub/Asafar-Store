@@ -6,12 +6,16 @@ use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
 use App\Models\Order;
 use Filament\Forms;
+use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\SelectColumn;
+
 use Filament\Tables\Columns\Summarizers\Sum;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -44,6 +48,7 @@ class OrderResource extends Resource
                 TextInput::make('status'),
 
 
+
             ]);
     }
 
@@ -54,8 +59,17 @@ class OrderResource extends Resource
                 TextColumn::make('order_number'),
                 TextColumn::make('first_name'),
                 TextColumn::make('last_name'),
-                TextColumn::make('phone'),
-                // TextColumn::make('total_order'),
+                TextColumn::make('orderItems.product.name')->label('Purchases')->badge(),
+                TextColumn::make('phone')->copyable(),
+                TextColumn::make('email')->copyable(),
+                SelectColumn::make('status')
+                    ->options([
+                        'Pending' => 'Pending',
+                        'In Process' => 'In Process',
+                        'Shipped' => 'Shipped',
+                        'Delivered' => 'Delivered',
+                    ]),
+
                 TextColumn::make('total_order')->summarize(Sum::make()->formatStateUsing(function ($state, Order $order) {
                     return number_format((float)$state, 2, '.', '') . ' $';
                 }))

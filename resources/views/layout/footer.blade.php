@@ -44,11 +44,6 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="https://www.pinterest.com/" target="_blank">
                                         <i class="fa fa-pinterest-p"></i>
                                     </a>

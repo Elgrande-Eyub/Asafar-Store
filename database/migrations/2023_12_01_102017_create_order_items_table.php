@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\order;
+use App\Models\orderItem;
 use App\Models\product;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,6 +18,7 @@ return new class extends Migration
             $table->id();
 
             $table->foreignIdFor(product::class)->constrained();
+            $table->foreignIdFor(order::class)->constrained();
             $table->bigInteger('qte');
             $table->string('total_item');
 
